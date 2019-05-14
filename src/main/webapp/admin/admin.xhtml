@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/tags">
+<h:head>
+	<title>Admin Page</title>
+</h:head>
+<h:body>
+	<h3>Admin Page</h3>
+	
+	<h:form onsubmit="this.action='#{request.contextPath}/logout';">
+		<p:commandButton value="Logout" ajax="false" />
+	</h:form>
+	
+	<p:panel>
+		<sec:authorize access="hasRole('ROLE_USER')">
+			<p:outputLabel value="You have the USER role" />
+		</sec:authorize>
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<p:outputLabel value="You have the ADMIN role" />
+		</sec:authorize>
+	</p:panel>
+	
+	<h:form prependId="false">
+
+		<p:outputLabel value="Admin Page" />
+
+	</h:form>
+	
+</h:body>
+</html>
