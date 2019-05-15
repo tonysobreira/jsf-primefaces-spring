@@ -243,24 +243,6 @@
 		<finalName>${project.artifactId}</finalName>
 	</build>
 	
-	<repositories>
-		<repository>
-			<url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
-			<id>eclipselink</id>
-			<layout>default</layout>
-			<name>Repository for library EclipseLink (JPA 2.1)</name>
-		</repository>
-		<repository>
-			<id>prime-repo</id>
-			<name>PrimeFaces Maven Repository</name>
-			<url>http://repository.primefaces.org</url>
-			<layout>default</layout>
-		</repository>
-		<repository>
-			<id>org.springframework.security.taglibs.facelets</id>
-			<name>Repository for library Library[spring-security-facelets-taglib-googlecode]</name>
-			<url>http://spring-security-facelets-taglib.googlecode.com/svn/repo/</url>
-		</repository>
-	</repositories>
+	
 
 </project>
