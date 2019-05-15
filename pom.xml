@@ -35,12 +35,6 @@
 		</dependency>
 		<!-- Spring Security -->
 		
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>facelets-taglib-jsf20-spring-3</artifactId>
-			<version>0.5</version>
-		</dependency>
-
 		<!-- Spring and Transactions -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -193,6 +187,13 @@
 		    <artifactId>primefaces</artifactId>
 		    <version>7.0</version>
 		</dependency>
+		
+		<!-- Spring Security Tag Lib -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>facelets-taglib-jsf20-spring-3</artifactId>
+			<version>0.6</version>
+		</dependency>
 
 	</dependencies>
 
@@ -243,6 +244,26 @@
 		<finalName>${project.artifactId}</finalName>
 	</build>
 	
-	
+	<repositories>
+		<repository>
+			<id>datapipeline-mvn-repo</id>
+			<url>https://raw.github.com/fredtucs/mvnrepository/mvn-repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>org.springframework.security.taglibs.facelets</id>
+			<name>Repository for library Library[spring-security-facelets-taglib-googlecode]</name>
+			<url>http://spring-security-facelets-taglib.googlecode.com/svn/repo/</url>
+		</repository>
+	</repositories>
 
 </project>
