@@ -3,8 +3,8 @@ package com.jsf.security;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -21,7 +21,7 @@ import com.jsf.service.UserService;
 @Service("customUserDetailsService")
 public class CustomUserDetailsService implements UserDetailsService {
 	
-	static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
+	//static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
 
 	@Autowired
 	private UserService userService;
@@ -30,10 +30,10 @@ public class CustomUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userService.findByUsername(username);
 		
-		logger.info("User : {}", user);
+		//logger.info("User : {}", user);
 		
 		if (user == null) {
-			logger.info("User not found");
+			//logger.info("User not found");
 			throw new UsernameNotFoundException("Username not found");
 		}
 		
@@ -48,7 +48,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 			authorities.add(new SimpleGrantedAuthority("ROLE_" + auth.getAuthority()));
 		}
 		
-		logger.info("authorities : {}", authorities);
+		//logger.info("authorities : {}", authorities);
 		return authorities;
 	}
 

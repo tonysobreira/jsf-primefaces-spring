@@ -4,7 +4,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:sec="http://www.springframework.org/security/tags">
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
 <h:head>
 	<title>Admin Page</title>
 </h:head>
@@ -16,12 +16,7 @@
 	</h:form>
 	
 	<p:panel>
-		<sec:authorize access="hasRole('ROLE_USER')">
-			<p:outputLabel value="You have the USER role" />
-		</sec:authorize>
-		<sec:authorize access="hasRole('ROLE_ADMIN')">
-			<p:outputLabel value="You have the ADMIN role" />
-		</sec:authorize>
+		<h:outputText value="hello #{userBean.username}" />
 	</p:panel>
 	
 	<h:form prependId="false">
