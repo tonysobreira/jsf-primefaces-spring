@@ -243,6 +243,12 @@
 		<finalName>${project.artifactId}</finalName>
 	</build>
 	
-	
+	<repositories>
+		<repository>
+			<id>org.springframework.security.taglibs.facelets</id>
+			<name>Repository for library Library[spring-security-facelets-taglib-googlecode]</name>
+			<url>http://spring-security-facelets-taglib.googlecode.com/svn/repo/</url>
+		</repository>
+	</repositories>
 
 </project>
